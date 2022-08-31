@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 app.use(router)
 
-mongoose.connect(process.env.MY_url)
+mongoose.connect(process.env.MY_url.toString())
 .then(()=>{
     app.listen(port, ()=>{
         console.log(`DB listening to ${port}`);
